@@ -1,0 +1,68 @@
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import styled from "styled-components/native";
+import theme from "../../global/styles/theme";
+// import theme from "../../global/styles/theme";
+import { MaterialIcons } from '@expo/vector-icons'; 
+
+
+export const Container=styled.View`
+flex:1;
+`
+
+export const Header=styled.View`
+width:100%;
+height:70%;
+
+background-color: ${({theme})=>theme.colors.primary};
+justify-content:flex-end;
+align-items: center;
+`
+export const TitleWrapper=styled.View`
+align-items: center;
+`
+export const Title=styled.Text`
+font-family: ${({theme})=>theme.fonts.medium};
+color: ${({theme})=>theme.colors.shape};
+font-size: ${RFValue(30)}px;
+text-align: center;
+margin-top: 45px;
+`
+export const SigninTitle=styled.Text`
+font-family: ${({theme})=>theme.fonts.regular};
+color: ${({theme})=>theme.colors.shape};
+font-size: ${RFValue(16)}px;
+text-align: center;
+margin-top: 80px;
+margin-bottom: 67px;
+`
+
+export const Footer=styled.View`
+width:100%;
+height:30%;
+background-color: ${({theme})=>theme.colors.secondary};
+`
+
+export const FooterWrapper=styled.View`
+margin-top:${RFPercentage(-4)}px;
+padding:0 32px;
+justify-content: space-between;
+
+`
+
+export const ErrorBarContainer=styled.View`
+background-color: ${({theme})=>theme.colors.attention};
+position:absolute;
+height: ${RFValue(100)}px;
+width: 100%;
+top:0;
+elevation:10;
+align-items: center;
+justify-content: flex-end;
+`
+
+export const ErrorBarMessage=styled.Text`
+color: ${({theme})=>theme.colors.shape};
+margin-bottom: 5px;
+height: 50%;
+`
+
